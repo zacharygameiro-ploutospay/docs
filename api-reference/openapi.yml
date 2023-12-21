@@ -8,7 +8,7 @@ servers:
 paths:
   /auth/login:
     post:
-      description: Returns a login token that can be exchanged for an auth token with firebase
+      description: Return a login token that can be exchanged for an auth token with firebase
       responses:
         200:
           description: Created
