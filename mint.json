@@ -33,9 +33,9 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Ploutos Ecosystem",
+      "icon": "connectdevelop",
+      "url": "https://docs.ploutospay.ca/ecosystem"
     },
     {
       "name": "Community",
