@@ -1,0 +1,110 @@
+openapi: "3.0.2"
+info:
+  title: API Title
+  version: "1.0"
+servers:
+  - url: http://localhost:3000
+    description: Development Server
+paths:
+  /auth/login:
+    post:
+      description: Returns a login token that can be exchanged for an auth token with firebase
+      responses:
+        200:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginToken"
+  /user/{userHandle}:
+    post:
+      parameters:
+        - $ref: "#/components/parameters/UserHandleParam"
+      description: The path for creating a new user
+      requestBody:
+        $ref: "#/components/requestBodies/CreateUserRequestBody"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginToken"
+        "409":
+          description: Conflict
+    get:
+      description: Returns the user for the associated user handle
+      responses:
+        200:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginToken"
+
+components:
+  parameters:
+    UserHandleParam:
+      name: userHandle
+      in: path
+      required: true
+      schema:
+        $ref: "#/components/schemas/UserHandle"
+  requestBodies:
+    CreateUserRequestBody:
+      description: "The request body for creating a user"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                $ref: "#/components/schemas/Name"
+              email:
+                $ref: "#/components/schemas/Email"
+              password:
+                $ref: "#/components/schemas/Password"
+              phoneNumber:
+                $ref: "#/components/schemas/PhoneNumber"
+          example:
+            CreateUserExample:
+              value:
+                {
+                  email: pfloyd@gmail.com,
+                  name: { first: Pink, last: Floyd },
+                  password: "passworD.1",
+                  phoneNumber: "1234567890",
+                }
+  schemas:
+    LoginToken:
+      description: A token that is used to create an auth token with firebase. It can be created by providing the user handle and password to the endpoint /auth/login
+      type: string
+    UserHandle:
+      description: A string used to identify a user
+      type: string
+      example: "@pinkfloyd"
+    Email:
+      description: A users email
+      type: string
+    PhoneNumber:
+      description: A phone number
+      type: string
+    Password:
+      description: A users password credential
+      type: string
+      format: password
+    Name:
+      description: An object containing the legal first, middle(s) and last names of a user
+      type: object
+      properties:
+        first:
+          description: A users first/given name
+          type: string
+        middle:
+          description: An array of a users middle names
+          type: array
+          items:
+            type: string
+        last:
+          description: A users last/family name
+          type: string
