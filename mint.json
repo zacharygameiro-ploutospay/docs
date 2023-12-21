@@ -7,7 +7,7 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
+    "primary": "#28374f",
     "light": "#07C983",
     "dark": "#0D9373",
     "anchors": {
@@ -44,7 +44,7 @@
     },
     {
       "name": "Business",
-      "icon":"briefcase",
+      "icon":"",
       "url": "https://docs.ploutospay.ca/business"
     
     },
@@ -55,7 +55,7 @@
     }
   ],
   "navigation": [
-    {
+    {by 
       "group": "Get Started",
       "pages": ["introduction", "quickstart", "development"]
     },
