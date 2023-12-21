@@ -38,9 +38,15 @@
       "url": "https://docs.ploutospay.ca/ecosystem"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Developer API",
+      "icon": "cubes",
+      "url": "https://docs.ploutospay.ca/api"
+    },
+    {
+      "name": "Business",
+      "icon":"briefcase",
+      "url": "https://docs.ploutospay.ca/business"
+    
     },
     {
       "name": "Blog",
