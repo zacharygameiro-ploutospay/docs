@@ -20,7 +20,7 @@ paths:
     post:
       parameters:
         - $ref: "#/components/parameters/UserHandleParam"
-      description: The path for creating a new user
+      description: Creates a new user and returns a login token
       requestBody:
         $ref: "#/components/requestBodies/CreateUserRequestBody"
       responses:

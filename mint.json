@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Ploutos Labs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -29,6 +29,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Business",
+      "url": "business"
     }
   ],
   "anchors": [
@@ -56,11 +60,19 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "group": "Fundamentals",
+      "pages": ["introduction", "security", "banking", "trading", "business"]
     },
     {
-      "group": "Essentials",
+      "group": "Web App",
+      "pages": ["app/introduction", "pages", "widgets"]
+    },
+    {
+      "group": "Integrations",
+      "pages": ["Legacy Banks", "Crypto Wallets"]
+    },
+    {
+      "group": "Resources",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -70,18 +82,57 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
+      "group": "Overview",
+      "pages": [
+        "api-reference/introduction",
+        {
+          "group": "Wallets",
+          "pages": ["api-reference/overview/authentication/overview"]
+        },
+        {
+          "group": "Authentication",
+          "pages": ["api-reference/overview/authentication/overview"]
+        },
+        {
+          "group": "Transactions",
+          "pages": ["api-reference/overview/transactions/overview"]
+        }
+      ]
     },
     {
       "group": "Auth",
       "pages": ["api-reference/endpoint/post-authlogin"]
     },
     {
-      "group": "User",
+      "group": "Admin",
       "pages": [
         "api-reference/endpoint/post-user",
         "api-reference/endpoint/get-user"
+      ]
+    },
+    {
+      "group": "Transaction API",
+      "pages": [
+        {
+          "group": "Sending Money",
+          "pages": [
+            "api-reference/endpoint/transaction/send-transfer",
+            "api-reference/endpoint/transaction/send-etransfer",
+            "api-reference/endpoint/transaction/send-email"
+          ]
+        },
+        {
+          "group": "Requesting Money",
+          "pages": [
+            "api-reference/endpoint/transaction/request-transfer",
+            "api-reference/endpoint/transaction/request-etransfer",
+            "api-reference/endpoint/transaction/request-email",
+            "api-reference/endpoint/transaction/request-update",
+            "api-reference/endpoint/transaction/request-accept",
+            "api-reference/endpoint/transaction/request-decline",
+            "api-reference/endpoint/transaction/request-cancel"
+          ]
+        }
       ]
     }
   ],
