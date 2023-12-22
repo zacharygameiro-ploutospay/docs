@@ -8,11 +8,10 @@
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#111822",
-    "light": "#111822",
+    "light": "#ffffff",
     "dark": "#111822",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+    "background": {
+      "dark": "#111822"
     }
   },
   "topbarLinks": [
@@ -27,19 +26,23 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Ploutos Pay",
+      "url": "ploutospay"
     },
     {
       "name": "Business",
       "url": "business"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
     }
   ],
   "anchors": [
     {
       "name": "Ploutos Ecosystem",
       "icon": "connectdevelop",
-      "url": "https://docs.ploutospay.ca/ecosystem"
+      "url": "https://docs.ploutospay.ca/ploutos-ecosystem/overview/introduction"
     },
     {
       "name": "Developer API",
@@ -48,9 +51,8 @@
     },
     {
       "name": "Business",
-      "icon":"briefcase",
+      "icon": "briefcase",
       "url": "https://docs.ploutospay.ca/business"
-    
     },
     {
       "name": "Blog",
@@ -58,27 +60,28 @@
       "url": "https://mintlify.com/blog"
     }
   ],
+
   "navigation": [
     {
-      "group": "Fundamentals",
-      "pages": ["introduction", "security", "banking", "trading", "business"]
-    },
-    {
-      "group": "Web App",
-      "pages": ["app/introduction", "pages", "widgets"]
-    },
-    {
-      "group": "Integrations",
-      "pages": ["Legacy Banks", "Crypto Wallets"]
+      "group": "Ecosystem Overview",
+      "pages": [
+        "ploutos-ecosystem/overview/introduction",
+        "ploutos-ecosystem/overview/banking",
+        "ploutos-ecosystem/overview/trading",
+        "ploutos-ecosystem/overview/analytics",
+        "ploutos-ecosystem/overview/business",
+        "ploutos-ecosystem/overview/sharing"
+      ]
     },
     {
       "group": "Resources",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation"
+        "ploutos-ecosystem/resources/wallets",
+        "ploutos-ecosystem/resources/banks",
+        "ploutos-ecosystem/resources/pools",
+        "ploutos-ecosystem/resources/portfolios",
+        "ploutos-ecosystem/resources/transactions",
+        "ploutos-ecosystem/resources/trades"
       ]
     },
     {
